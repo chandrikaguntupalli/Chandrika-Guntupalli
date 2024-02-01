@@ -86,5 +86,9 @@ try:
         print(db_name)*/''' #once sucessfully established connection
 except Exception as e:
     print(e)
+TERMINAL:
+>>>PS C:\Users\Dell\.vscode> & "C:/Program Files/Python310/python.exe" 
+"c:/Users/Dell/OneDrive/Desktop/Adv Data Base design/mangodb python.py"
+Pinged your deployment. You successfully connected to MongoDB!
 
 
