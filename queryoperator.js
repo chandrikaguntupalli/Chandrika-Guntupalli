@@ -1,3 +1,4 @@
+
 # logic and query
 db.restaurants.find({$and: [{cuisine: "Jewish"}, {cuisine: "Hamburgers"}]}); 
 # logic or query
