@@ -1,12 +1,21 @@
-# logic and query
+//Using Sample_restaurants data
+// logic and query
 db.restaurants.find({$and: [{cuisine: "Jewish"}, {cuisine: "Hamburgers"}]}); 
-# logic or query
+// logic or query
 db.restaurants.find({$or: [{borough: "Manhattan"}, {borough: "Brooklyn"}]});
-# logic nor query
+// logic nor query
 db.restaurants.find({ $nor: [{cuisine: "Bakery"},{cuisine: "American"}]})
-# logic not query
+//Using Sample_airbnb data
+// logic not query
 db.grades.find({class_id:{$not:{$gt:460}}})
-# insertOne query
+//andoror
+db.listingsAndReviews.find({
+  $and: [
+    { $nor: [{ amenities: "Iron" }, { amenities: "Internet" }] },
+    { $nor: [{ amenities: "Hangers" }, { amenities: "Heating" }] },
+  ],
+});
+// insertOne query
 db.listingsAndReviews.insertOne({
   student_id: 123456,
   products: [
@@ -20,8 +29,8 @@ db.listingsAndReviews.insertOne({
   acknowledged: true,
   insertedId: ObjectId('65ba7df3f1d84eeb1df5ea49')
 }
-# insertMany query
-db.restaurants.insertMany([
+// insertMany query
+db.listingsAndReviews.insertMany([
   {
     restaurant_id: 987655,
     cuisine: "Mexican",
@@ -61,16 +70,24 @@ db.restaurants.insertMany([
     '1': ObjectId('65bb258082d409d7f2efeecf')
   }
 }
-
-# greaterthan
+//elementsmatch
+db.listingsAndReviews.find({amenities: {$elemMatch: {$eq: "Wifi"}}});
+//find
+db.grades.find({ _id: ObjectId("65b9b6f769c4895078585dc0") })
+//findArray
+db.listingsAndReviews.find({amenities: "Wifi"});
+// greaterthan
 db.grades.find({ "products.score": { $lt: 59  } })
-# lessthan
+// lessthan
 db.grades.find({ "products.score": { $lt: 59  } })
-# GREATERTHAN EQUAL TO
+// GREATERTHAN EQUAL TO
 db.zips.find({ "pop": { $lte: 1500  } })
-# Lessthan Equal to
+// Lessthan Equal to
 db.zips.find({ "pop": { $lte: 1500  } })
-# MongoDBPYTHON
+//in
+db.grades.find({ student_id: { $in: [654321, 546789] } })
+db.grades.find({ _id: { $in: [ObjectId('65b9b75969c4895078585dc1'), ObjectId('65b9b75969c4895078585dc2')] } })
+// MongoPY
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -86,5 +103,9 @@ try:
         print(db_name)*/''' #once sucessfully established connection
 except Exception as e:
     print(e)
+/* output
+>>>PS C:\Users\Dell\.vscode> & "C:/Program Files/Python310/python.exe" 
+"c:/Users/Dell/OneDrive/Desktop/Adv Data Base design/mangodb python.py"
+Pinged your deployment. You successfully connected to MongoDB!
 
 
