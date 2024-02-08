@@ -1,3 +1,4 @@
+//use sample_restaurents
 // ascending order
 db.neighborhoods.find({name: "Bedford"}).sort({name: 1});
 //descending order
