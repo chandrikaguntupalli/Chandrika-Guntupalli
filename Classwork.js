@@ -1,8 +1,8 @@
-#creating a database and collection
-#student database 
+//creating a database and collection
+//student database 
 db.createCollection("details")
-#inserting data 
-#Query 1
+//inserting data 
+//Query 1
 db.details.insertOne({Emp_ID: "10025AE336",
 Personal_details:{
     First_Name: "Radhika",
@@ -18,7 +18,7 @@ Address: {
     Area: "Madapur",
     State: "Telangana"
 }})
-#Query 2
+//Query 2
 db.details.insertOne({id: POST_ID,
 title: TITLE_OF_POST,
 description: POST_DESCRIPTION,
