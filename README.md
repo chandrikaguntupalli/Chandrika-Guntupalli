@@ -1,4 +1,4 @@
-## Money Tracker
+## Money Tracker Web App
 
 Manage your finances effortlessly with Money Tracker - a simple and intuitive web-based tool designed to help you stay on top of your income and expenses.
 
