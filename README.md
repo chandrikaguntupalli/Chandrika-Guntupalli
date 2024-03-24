@@ -11,7 +11,7 @@ Manage your finances effortlessly with Money Tracker - a simple and intuitive we
 
 ### Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript (Vanilla JavaScript)
+- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (Mongoose ODM)
 
