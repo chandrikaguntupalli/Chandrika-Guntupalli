@@ -29,6 +29,3 @@ Manage your finances effortlessly with Money Tracker - a simple and intuitive we
 - **Data Visualization**: Visualize your financial data with charts and graphs.
 - **Budgeting Tools**: Enhance budget management with additional features.
 
-### Contributing
-
-Contributions are welcome! Fork the repository, make your enhancements, and submit a pull request.
