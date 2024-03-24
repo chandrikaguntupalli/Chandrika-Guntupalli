@@ -32,7 +32,3 @@ Manage your finances effortlessly with Money Tracker - a simple and intuitive we
 ### Contributing
 
 Contributions are welcome! Fork the repository, make your enhancements, and submit a pull request.
-
-### License
-
-This project is licensed under the [MIT License](LICENSE).
